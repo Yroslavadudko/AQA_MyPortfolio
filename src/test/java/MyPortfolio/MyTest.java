@@ -5,18 +5,17 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.safari.SafariDriver;
-import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-import java.time.Duration;
 
-import static org.openqa.selenium.support.ui.ExpectedCondition.*;
+import java.time.Duration;
+import java.util.Set;
+
 import static org.testng.Assert.assertEquals;
-import static org.testng.Assert.assertTrue;
 
 public class MyTest {
   private WebDriver driver;
@@ -67,6 +66,16 @@ public class MyTest {
     assertEquals(aboutHeader, expectedAboutHeaderText, "The page title does not match the expected text");
         //Click on the body of the page to lose focus on "Projects"
     js.executeScript("document.body.click()");
+        //Click in the "My resume"
+    String mainWindowHandle = driver.getWindowHandle();
+    WebElement resumeOpen = driver.findElement(By.xpath("//button[text()='My resume']"));
+    resumeOpen.click();
+    Set<String> allWindowHandles = driver.getWindowHandles();
+    for (String windowHandle : allWindowHandles){
+      driver.switchTo().window(windowHandle);
+    }
+    driver.close();
+    driver.switchTo().window(mainWindowHandle);
         //Find the "skills" section
     WebElement skillsSection = driver.
             findElement(By.xpath("//div[@class='skill-section']//h1[@class='heading']"));
@@ -119,10 +128,10 @@ public class MyTest {
     Assert.assertTrue(aboutLink.isDisplayed());
     Assert.assertTrue(contactLink.isDisplayed());
 
-    assertEquals("home", homeLink.getText());
-    assertEquals("projects", projectsLink.getText());
-    assertEquals("about", aboutLink.getText());
-    assertEquals("contact", contactLink.getText());
+    assertEquals(homeLink.getText(), "home");
+    assertEquals(projectsLink.getText(), "projects");
+    assertEquals(aboutLink.getText(), "about");
+    assertEquals(contactLink.getText(), "contact");
 
 
   }

@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bb9488d8-4dba-4dfe-989a-d9eecfb34ada" name="Changes" comment="28/10">
+    <list default="true" id="bb9488d8-4dba-4dfe-989a-d9eecfb34ada" name="Changes" comment="Form email">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/MyPortfolio/MyTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/MyPortfolio/MyTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/MyPortfolio/MyTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/MyPortfolio/MyTest.class" afterDir="false" />
     </list>
@@ -172,7 +173,15 @@
       <option name="project" value="LOCAL" />
       <updated>1698504917351</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Form email">
+      <option name="closed" value="true" />
+      <created>1698511283177</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1698511283177</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -188,7 +197,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="28/10" />
-    <option name="LAST_COMMIT_MESSAGE" value="28/10" />
+    <MESSAGE value="Form email" />
+    <option name="LAST_COMMIT_MESSAGE" value="Form email" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
