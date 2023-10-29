@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bb9488d8-4dba-4dfe-989a-d9eecfb34ada" name="Changes" comment="my resume">
+    <list default="true" id="bb9488d8-4dba-4dfe-989a-d9eecfb34ada" name="Changes" comment="declared variables">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/MyPortfolio/MyTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/MyPortfolio/MyTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/MyPortfolio/MyTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/MyPortfolio/MyTest.class" afterDir="false" />
@@ -188,7 +188,15 @@
       <option name="project" value="LOCAL" />
       <updated>1698525878631</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="declared variables">
+      <option name="closed" value="true" />
+      <created>1698608513551</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1698608513551</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -206,7 +214,8 @@
     <MESSAGE value="28/10" />
     <MESSAGE value="Form email" />
     <MESSAGE value="my resume" />
-    <option name="LAST_COMMIT_MESSAGE" value="my resume" />
+    <MESSAGE value="declared variables" />
+    <option name="LAST_COMMIT_MESSAGE" value="declared variables" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>

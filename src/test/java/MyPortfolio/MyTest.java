@@ -72,7 +72,7 @@ public class MyTest {
     mainWindowHandle= driver.getWindowHandle();
     WebElement resumeOpen = driver.findElement(By.xpath("//button[text()='My resume']"));
     resumeOpen.click();
-    allWindowHandles =driver.getWindowHandles();
+    allWindowHandles = driver.getWindowHandles();
     for (String windowHandle : allWindowHandles){
       driver.switchTo().window(windowHandle);
     }
@@ -85,6 +85,16 @@ public class MyTest {
     String actualSkillsHeaderText = skillsSection.getText();
     assertEquals(actualSkillsHeaderText, expectedSkillsHeaderText,
             "The page title does not match the expected text");
+    //Click in the "Certificate"
+    mainWindowHandle = driver.getWindowHandle();
+    WebElement certificateQaOpen = driver.findElement(By.xpath("//button[text()='Certificate']"));
+    certificateQaOpen.click();
+    allWindowHandles = driver.getWindowHandles();
+    for (String windowHandle : allWindowHandles){
+      driver.switchTo().window(windowHandle);
+    }
+    driver.close();
+    driver.switchTo().window(mainWindowHandle);
     //Find the "education and experience" section
     WebElement educationAndExperienceSection = driver.
             findElement(By.xpath("//div[@class='timeline']//h1[@class='heading']"));
