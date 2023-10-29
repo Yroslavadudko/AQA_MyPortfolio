@@ -60,15 +60,15 @@ public class MyTest {
     //Checking the navigation menu/About
     WebElement aboutLink = driver.findElement(By.xpath("//nav[@class='navbar']//a[text()='about']"));
     aboutLink.click();
-    //Find the "my about" element using JavaScript
+        //Find the "my about" element using JavaScript
     JavascriptExecutor js = (JavascriptExecutor) driver;
     String aboutHeader = (String) js.executeScript
             ("return document.querySelector('section.about-section.active h1[hidden]').textContent");
     String expectedAboutHeaderText = "my about";
     assertEquals(aboutHeader, expectedAboutHeaderText, "The page title does not match the expected text");
-    //Click on the body of the page to lose focus on "Projects"
+        //Click on the body of the page to lose focus on "Projects"
     js.executeScript("document.body.click()");
-    //Click in the "My resume"
+        //Click in the "My resume"
     mainWindowHandle= driver.getWindowHandle();
     WebElement resumeOpen = driver.findElement(By.xpath("//button[text()='My resume']"));
     resumeOpen.click();
@@ -78,16 +78,16 @@ public class MyTest {
     }
     driver.close();
     driver.switchTo().window(mainWindowHandle);
-    //Find the "skills" section
+        //Find the "skills" section
     WebElement skillsSection = driver.
             findElement(By.xpath("//div[@class='skill-section']//h1[@class='heading']"));
     String expectedSkillsHeaderText = "skills";
     String actualSkillsHeaderText = skillsSection.getText();
     assertEquals(actualSkillsHeaderText, expectedSkillsHeaderText,
             "The page title does not match the expected text");
-    //Click in the "Certificate"
+        //Click in the "Certificate QA"
     mainWindowHandle = driver.getWindowHandle();
-    WebElement certificateQaOpen = driver.findElement(By.xpath("//button[text()='Certificate']"));
+    WebElement certificateQaOpen = driver.findElement(By.xpath("//button[text()='Certificate QA Eng.']"));
     certificateQaOpen.click();
     allWindowHandles = driver.getWindowHandles();
     for (String windowHandle : allWindowHandles){
@@ -95,7 +95,17 @@ public class MyTest {
     }
     driver.close();
     driver.switchTo().window(mainWindowHandle);
-    //Find the "education and experience" section
+        //Click in the "Certificate HTML/CSS"
+    mainWindowHandle = driver.getWindowHandle();
+    WebElement certificateHtmlOpen = driver.findElement(By.xpath("//button[text()='Certificate HTML/CSS.']"));
+    certificateHtmlOpen.click();
+    allWindowHandles = driver.getWindowHandles();
+    for (String windowHandle : allWindowHandles){
+      driver.switchTo().window(windowHandle);
+    }
+    driver.close();
+    driver.switchTo().window(mainWindowHandle);
+        //Find the "education and experience" section
     WebElement educationAndExperienceSection = driver.
             findElement(By.xpath("//div[@class='timeline']//h1[@class='heading']"));
     String expectedEducationAndExperienceHeaderText = "education and experience";
@@ -106,24 +116,24 @@ public class MyTest {
     //Checking the navigation menu/Contact
     WebElement contactLink = driver.findElement(By.xpath("//nav[@class='navbar']//a[text()='contact']"));
     contactLink.click();
-    //Find the "contact" element using JavaScript
+        //Find the "contact" element using JavaScript
     String contactHeader = (String) js.executeScript
             ("return document.querySelector('section.contact-section h1').textContent");
     String expectedContactHeaderText = "Contact Information";
     assertEquals(contactHeader, expectedContactHeaderText, "The page title does not match the expected text");
-    //Click on the body of the page to lose focus on "my about"
+        //Click on the body of the page to lose focus on "my about"
     js.executeScript("document.body.click()");
-    //Find the contact form
+        //Find the contact form
     WebElement contactForm = driver.findElement(By.cssSelector("form.contact-form"));
-    //Find the name, email, and message elements within the form
+        //Find the name, email, and message elements within the form
     WebElement nameInput = driver.findElement(By.id("name"));
     WebElement emailInput = driver.findElement(By.id("email"));
     WebElement messageInput = driver.findElement(By.id("msg"));
-    //Find in the form fields
+        //Find in the form fields
     nameInput.sendKeys("Myk");
     emailInput.sendKeys("myk@myk.mk");
     messageInput.sendKeys("Hello, this is a AQA test");
-    //Find and click the submit button
+        //Find and click the submit button
     WebElement submitButton = contactForm.findElement(By.cssSelector("button.form-submit-btn"));
     submitButton.click();
 
