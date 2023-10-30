@@ -18,6 +18,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="test" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectColorInfo">{
@@ -124,6 +129,7 @@
         <item itemvalue="TestNG.MyTest" />
         <item itemvalue="JUnit.MyTest.testMyPage" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="TestNG.MyTest.testMykolaDudkoPage" />
       </list>
     </recent_temporary>
   </component>
