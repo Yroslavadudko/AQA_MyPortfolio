@@ -1,0 +1,25 @@
+<suite name="MyTestSuite">
+    <test name="TestHomePage">
+        <classes>
+            <class name="MyPortfolio.TestHomePage"/>
+        </classes>
+    </test>
+    <test name="TestProjectsPage">
+        <classes>
+            <class name="MyPortfolio.TestProjectsPage"/>
+        </classes>
+    </test>
+    <test name="TestAboutPage">
+        <classes>
+            <class name="MyPortfolio.TestAboutPage"/>
+        </classes>
+    </test>
+    <test name="TestContactPage">
+        <classes>
+            <class name="MyPortfolio.TestContactPage"/>
+        </classes>
+    </test>
+</suite>
+
+
+
