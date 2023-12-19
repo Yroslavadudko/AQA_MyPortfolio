@@ -4,13 +4,8 @@ import Base.BaseTest;
 import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
-import java.time.Duration;
-
 import static org.testng.Assert.assertEquals;
 import static utils.AllureAttachmentUtils.attachScreenshot;
 
@@ -26,8 +21,8 @@ public class TestProjectsPage extends BaseTest {
 
     @Step("Open the Projects page")
     private void openProjectsPage() {
-
-        WebElement projectsLink = driver.findElement(By.xpath("//nav[@class='navbar']//a[text()='projects']"));
+        WebElement projectsLink = driver
+                .findElement(By.xpath("//nav[@class='navbar']//a[text()='projects']"));
         projectsLink.click();
     }
 

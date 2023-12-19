@@ -5,6 +5,12 @@ import org.openqa.selenium.WebDriver;
 import java.util.Set;
 
 public class WindowUtils {
+
+    // Приватний конструктор для приховання імпліцитного публічного конструктора
+    private WindowUtils() {
+        // Порожнє тіло конструктора
+    }
+
     /**
      * Використовуйте цей метод для виконання дій у новому вікні
      *
@@ -28,7 +34,8 @@ public class WindowUtils {
         }
 
         // Повертаємося до основного вікна
-        driver.switchTo().window(mainWindowHandle);
+//        driver.switchTo().window(mainWindowHandle);
     }
 }
+
 
